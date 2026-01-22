@@ -44,7 +44,7 @@ class AppTheme {
 
     return ThemeData(
       useMaterial3: true,
-      fontFamily: 'Inter',
+      fontFamily: 'Montserrat',
       colorScheme: colorScheme,
       scaffoldBackgroundColor: AppColors.background,
 
