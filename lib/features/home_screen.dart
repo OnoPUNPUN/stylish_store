@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:stylish_store/app/config/theme/app_utils.dart';
 import 'package:stylish_store/app/extensions/theme_extension.dart';
-import 'package:stylish_store/app/features/common/presentation/widgets/theme_toggle_switch.dart';
+import 'package:stylish_store/app/helpers/show_snack_message_helper.dart';
+import 'package:stylish_store/features/common/presentation/widgets/theme_toggle_switch.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({required this.title, super.key});
@@ -19,15 +20,34 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(title: Text(widget.title)),
       body: Center(
         child: Column(
-          mainAxisAlignment: .center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const ThemeToggleSwitch(),
             gap4,
-            ElevatedButton(onPressed: () {}, child: const Text('Tap me')),
+            ElevatedButton(
+              onPressed: () {
+                showSnackMessage(context, message: 'Success');
+              },
+              child: const Text('Tap me'),
+            ),
             gap4,
-            OutlinedButton(onPressed: () {}, child: const Text('Tap me')),
+            OutlinedButton(
+              onPressed: () {
+                showSnackMessage(context, message: 'Error', isError: true);
+              },
+              child: const Text('Tap me'),
+            ),
             gap4,
-            TextButton(onPressed: () {}, child: const Text('Tap me')),
+            TextButton(
+              onPressed: () {
+                showSnackMessage(
+                  context,
+                  message: 'Warning',
+                  type: SnackMessageType.warning,
+                );
+              },
+              child: const Text('Tap me'),
+            ),
             gap4,
             const SizedBox(height: 100, width: 200, child: Card()),
             gap4,

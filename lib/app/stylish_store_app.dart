@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stylish_store/app/config/theme/app_theme.dart';
 import 'package:stylish_store/app/constants/app_constant.dart';
 
 import 'package:stylish_store/di.dart';
@@ -21,7 +22,8 @@ class StylishStoreApp extends StatelessWidget {
         builder: (context, themeMode) {
           return MaterialApp(
             title: AppConfiguration.appName,
-            theme: ThemeData.light(),
+            theme: AppTheme.light(),
+            darkTheme: AppTheme.dark(),
             themeMode: context.read<ThemeCubit>().flutterThemeMode,
             home: const MyHomePage(title: 'Home'),
           );

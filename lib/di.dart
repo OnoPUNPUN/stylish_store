@@ -10,11 +10,14 @@ import 'package:stylish_store/features/common/presentation/states/theme_cubit.da
 
 final GetIt getIt = GetIt.instance;
 
-Future<void> initDependencies() async {}
+Future<void> initDependencies() async {
+  await _setupSharedPreferences();
+  await _setupTheme();
+}
 
 Future<void> _setupSharedPreferences() async {
   final sharedPreferences = await SharedPreferences.getInstance();
-  getIt.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
+  getIt.registerSingleton<SharedPreferences>(sharedPreferences);
 }
 
 Future<void> _setupTheme() async {

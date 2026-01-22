@@ -145,6 +145,117 @@ class AppTheme {
     );
   }
 
+  static ThemeData dark() {
+    const colorScheme = ColorScheme.dark(
+      primary: AppColors.primary,
+      onSurface: AppColors.textInverse,
+      error: AppColors.error,
+      outline: AppColors.border,
+    );
+
+    return ThemeData(
+      useMaterial3: true,
+      fontFamily: 'Montserrat',
+      colorScheme: colorScheme,
+      scaffoldBackgroundColor: const Color(0xFF121212),
+
+      // ─── AppBar ───────────────────────────────────────────────────────
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Color(0xFF1E1E1E),
+        foregroundColor: AppColors.textInverse,
+        elevation: 0,
+        centerTitle: true,
+      ),
+
+      // ─── Cards ────────────────────────────────────────────────────────
+      cardTheme: CardThemeData(
+        color: const Color(0xFF1E1E1E),
+        elevation: 0,
+        margin: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+          side: const BorderSide(color: Color(0xFF333333)),
+        ),
+      ),
+
+      // ─── Inputs ───────────────────────────────────────────────────────
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: const Color(0xFF1E1E1E),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 14,
+        ),
+        hintStyle: const TextStyle(color: AppColors.textMuted),
+        border: _outline(const Color(0xFF333333)),
+        enabledBorder: _outline(const Color(0xFF333333)),
+        focusedBorder: _outline(AppColors.primary, width: 2),
+        errorBorder: _outline(AppColors.error),
+      ),
+
+      // ─── Buttons ──────────────────────────────────────────────────────
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.primary,
+          foregroundColor: AppColors.textInverse,
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          textStyle: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+        ),
+      ),
+
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: AppColors.primary,
+          textStyle: const TextStyle(fontWeight: FontWeight.w600),
+        ),
+      ),
+
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.textInverse,
+          side: const BorderSide(color: Color(0xFF333333)),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        ),
+      ),
+
+      // ─── Typography ───────────────────────────────────────────────────
+      textTheme: const TextTheme(
+        headlineLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        headlineMedium: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        bodyLarge: TextStyle(fontSize: 15),
+        bodyMedium: TextStyle(fontSize: 14),
+        bodySmall: TextStyle(fontSize: 12, color: AppColors.textMuted),
+      ),
+
+      // ─── Divider ──────────────────────────────────────────────────────
+      dividerTheme: const DividerThemeData(
+        color: Color(0xFF333333),
+        thickness: 1,
+      ),
+
+      // ─── SnackBar ─────────────────────────────────────────────────────
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: const Color(0xFF1E1E1E),
+        contentTextStyle: const TextStyle(color: AppColors.textInverse),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+
+      // ─── Bottom Navigation ────────────────────────────────────────────
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: Color(0xFF1E1E1E),
+        selectedItemColor: AppColors.primary,
+        unselectedItemColor: AppColors.iconMuted,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+      ),
+    );
+  }
+
   static OutlineInputBorder _outline(Color color, {double width = 1}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
