@@ -1,4 +1,4 @@
-import 'package:stylish_store/app/features/common/domain/entities/theme_mode_entity.dart';
+import 'package:stylish_store/features/common/domain/entities/theme_mode_entity.dart';
 
 abstract class ThemeRepository {
   Future<ThemeModeEntity> getTheme();
