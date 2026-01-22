@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:stylish_store/app/features/common/data/datasources/theme_local_datasource.dart';
+import 'package:stylish_store/features/common/data/datasources/theme_local_datasource.dart';
 
 class ThemeLocalDatasourceImpl implements ThemeLocalDataSource {
   final SharedPreferences sharedPreferences;

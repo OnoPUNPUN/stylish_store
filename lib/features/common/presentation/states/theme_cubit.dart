@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:stylish_store/app/features/common/domain/entities/theme_mode_entity.dart';
-import 'package:stylish_store/app/features/common/domain/usecase/get_theme_use_case.dart';
-import 'package:stylish_store/app/features/common/domain/usecase/save_theme_use_case.dart';
+import 'package:stylish_store/features/common/domain/entities/theme_mode_entity.dart';
+import 'package:stylish_store/features/common/domain/usecase/get_theme_use_case.dart';
+import 'package:stylish_store/features/common/domain/usecase/save_theme_use_case.dart';
 
 class ThemeCubit extends Cubit<ThemeModeEntity> {
   final GetThemeUseCase getThemeUseCase;

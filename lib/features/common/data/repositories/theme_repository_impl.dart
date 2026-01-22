@@ -1,6 +1,6 @@
-import 'package:stylish_store/app/features/common/data/datasources/theme_local_datasource.dart';
-import 'package:stylish_store/app/features/common/domain/entities/theme_mode_entity.dart';
-import 'package:stylish_store/app/features/common/domain/repositories/theme_repository.dart';
+import 'package:stylish_store/features/common/data/datasources/theme_local_datasource.dart';
+import 'package:stylish_store/features/common/domain/entities/theme_mode_entity.dart';
+import 'package:stylish_store/features/common/domain/repositories/theme_repository.dart';
 
 class ThemeRepositoryImpl implements ThemeRepository {
   final ThemeLocalDataSource localDataSource;

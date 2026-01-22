@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   get_it: ^9.2.0
   shared_preferences: ^2.5.4
+  toastification: ^3.0.3
   
 
 dev_dependencies:

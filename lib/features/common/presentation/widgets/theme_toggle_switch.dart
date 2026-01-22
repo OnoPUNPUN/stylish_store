@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stylish_store/app/extensions/theme_extension.dart';
-import 'package:stylish_store/app/features/common/domain/entities/theme_mode_entity.dart';
-import 'package:stylish_store/app/features/common/presentation/states/theme_cubit.dart';
+import 'package:stylish_store/features/common/domain/entities/theme_mode_entity.dart';
+import 'package:stylish_store/features/common/presentation/states/theme_cubit.dart';
 
 class ThemeToggleSwitch extends StatelessWidget {
   const ThemeToggleSwitch({super.key});
