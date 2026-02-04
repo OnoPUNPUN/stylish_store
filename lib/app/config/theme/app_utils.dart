@@ -1,45 +1,5 @@
 import 'package:flutter/material.dart';
 
-SizedBox get gap4 => const SizedBox(height: 4);
-
-SizedBox get gap8 => const SizedBox(height: 8);
-
-SizedBox get gap12 => const SizedBox(height: 12);
-
-SizedBox get gap16 => const SizedBox(height: 16);
-
-SizedBox get gap20 => const SizedBox(height: 20);
-
-SizedBox get gap24 => const SizedBox(height: 24);
-
-SizedBox get gap32 => const SizedBox(height: 32);
-
-SizedBox get gap40 => const SizedBox(height: 40);
-
-SizedBox get gap48 => const SizedBox(height: 48);
-
-SizedBox get gap64 => const SizedBox(height: 64);
-
-SizedBox get gapW4 => const SizedBox(width: 4);
-
-SizedBox get gapW8 => const SizedBox(width: 8);
-
-SizedBox get gapW12 => const SizedBox(width: 12);
-
-SizedBox get gapW16 => const SizedBox(width: 16);
-
-SizedBox get gapW20 => const SizedBox(width: 20);
-
-SizedBox get gapW24 => const SizedBox(width: 24);
-
-SizedBox get gapW32 => const SizedBox(width: 32);
-
-SizedBox get gapW40 => const SizedBox(width: 40);
-
-SizedBox get gapW48 => const SizedBox(width: 48);
-
-SizedBox get gapW64 => const SizedBox(width: 64);
-
 EdgeInsets get paddingAll4 => const EdgeInsets.all(4);
 
 EdgeInsets get paddingAll8 => const EdgeInsets.all(8);
