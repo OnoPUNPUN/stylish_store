@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stylish_store/app/config/theme/app_utils.dart';
+import 'package:gap/gap.dart';
 import 'package:stylish_store/app/extensions/theme_extension.dart';
 import 'package:stylish_store/app/helpers/show_snack_message_helper.dart';
 import 'package:stylish_store/features/common/presentation/widgets/theme_toggle_switch.dart';
@@ -23,21 +23,21 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const ThemeToggleSwitch(),
-            gap4,
+            const Gap(4),
             ElevatedButton(
               onPressed: () {
                 showSnackMessage(context, message: 'Success');
               },
               child: const Text('Tap me'),
             ),
-            gap4,
+            const Gap(4),
             OutlinedButton(
               onPressed: () {
                 showSnackMessage(context, message: 'Error', isError: true);
               },
               child: const Text('Tap me'),
             ),
-            gap4,
+           const Gap(4),
             TextButton(
               onPressed: () {
                 showSnackMessage(
@@ -48,11 +48,11 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Tap me'),
             ),
-            gap4,
+            const Gap(4),
             const SizedBox(height: 100, width: 200, child: Card()),
-            gap4,
+            const Gap(4),
             Text('This is a text', style: context.bodyLargeBold),
-            gap4,
+            const Gap(4),
             Text(
               'This is a text',
               style: context.bodyLargeBold!.copyWith(color: context.error),
